@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to KRY</title>
+    <link href="static/styles.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+    <h1>KRY status poller</h1>
+
+    <form class="add-form" id="add-form">
+        <label>
+            URL
+            <input name="url" required type="url">
+        </label>
+        <label>
+            Name
+            <input name="name" required type="text">
+        </label>
+        <button type="submit">Save</button>
+    </form>
+
+    <div class="service-list" id="service-list">
+        <div class="loadingio-spinner-spinner-cjganze2bgk">
+            <div class="ldio-401lw08ccj4">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal hidden" id="edit-modal">
+    <form class="modal-content" id="edit-form">
+        <button aria-label="Close Edit Form" class="modal-content-close" type="reset">&times;
+        </button>
+        <div>
+            <label>
+                URL
+                <input name="url" required type="url">
+            </label>
+        </div>
+        <div>
+            <label>
+                Name
+                <input name="name" required type="text">
+            </label>
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vertx/3.8.3/vertx-eventbus.min.js"></script>
+<script src="static/code.js"></script>
+</html>
