@@ -39,7 +39,7 @@ public class MainVerticle extends AbstractVerticle {
     router.route().handler(BodyHandler.create());
     setRoutes(router);
 
-    vertx.setPeriodic(1000 * 10, timerId -> {
+    vertx.setPeriodic(1000 * 60, timerId -> {
       serviceRepository.getAll().setHandler(asyncResult -> {
         if (asyncResult.succeeded()) {
           final List<Service> services = asyncResult.result();
